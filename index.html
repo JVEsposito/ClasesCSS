@@ -1,58 +1,135 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!-- el doctype le indica que estamos trabajando con las version html5 -->
 <html lang="es">
-    <!-- todo documento tiene una etiquera html y esta es la madre de todas las etiquetas  -->
-<head>
-    <meta charset="UTF-8">
+  <!-- todo documento tiene una etiquera html y esta es la madre de todas las etiquetas  -->
+  <head>
+    <meta charset="UTF-8" />
     <!-- aporta meta informacion del contenido del documento, solo tiene una apertura y no un cierre -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyberpage</title>
-</head>
-<body>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html"> Introduccion a html</a></li>
+        <li><a href="estructura.html">Estructura de un documento HTML</a></li>
+        <li><a href="introCCS.html">Introduccion a ccs</li>
+        <li><a href="introJS.html"></a>Introduccion a Js</li>
+        <li><a href="introdom.html"></a>Introduccion al DOM</li>
+      </ul>
+    </nav>
     <!-- emmet es un pluggin para editores de code, que nos proporcionan atajos para programar de mejor manera  -->
-    <h1>Encabezado principal </h1>
+    <h1>Encabezado principal</h1>
     <!-- encabezado emplementa 6 niveles de importancia desde h1 (el mas importante) hasta h6(el menos importante) NOTA:NUNCA PERO NUNCA LO USEN PARA DAR ESTILOS A TEXTOS, PARA ESTO USAREMOS CSS -->
-   <h1>Encabezado 1</h1>
-   <h2>Encabezado 2</h2>
-   <h3>Encabezado 3</h3>
-   <h4>Encabezado 4</h4>
-   <h5>Encabezado 5</h5>
-   <h6>Encabezado 6</h6>
-   <!-- CTRL + ALT  + FLECHA multiplica un cursor
+    <h1>Encabezado 1</h1>
+    <h2>Encabezado 2</h2>
+    <h3>Encabezado 3</h3>
+    <h4>Encabezado 4</h4>
+    <h5>Encabezado 5</h5>
+    <h6>Encabezado 6</h6>
+    <!-- CTRL + ALT  + FLECHA multiplica un cursor
 ALT + mouse tambien m ultiplica cursos-->
-<hr> <!-- CAMBIO DE TEMA ENTRE PARRAFOS, DE FORMA VISUAL ´PUEDE SER REPRESENTADO  COMO UNA LINEA HORIZONTAL SIN EMBARGO NO SE DEBERIA USAR PARA ESTO -->
-<h2>otro parrafo</h2>
-<h3>parrafos</h3>
-<p><span style="color:blue">Lorem, ipsum dolor sit amet </span>consectetur adipisicing elit. Illo facere itaque libero inventore repudiandae, quis eaque quibusdam, asperiores est, veniam eum. Ut, accusantium dignissimos non nesciunt illo repellendus. Odit, tempora?</p>
-<hr>
-<h2>link</h2>
-<h3>ancla</h3>
-<a href="https://www.google.com" target="_blank">Google</a><br>
-<a target="_blank" href="https://www.google.com">Google en ventana aparte</a>
-<hr> 
-<!-- ancla crea enlaces  -->
-<h2>Formulario</h2>
-<form action="Cyberform" method="get">
-<label for="nombre">nombre</label><br>
-<input type="text" name="nombre" id="nombre"placeholder="indica tu nombre">
-<br>
-<label for="edad">edad</label><br>
-<input type="number" id="edad" name="edad" placeholder="indica tu edad" >
-<br>
-<label for="email">email</label><br>
-<input type="email" id="email" name="email" placeholder="indica tu email">
-<br><br>
-<label for="password">password</label><br>
-<input type="password" id="password" name="password" placeholder="indica tu password">
-<br><br>
-<label for="texto">Texto</label>
-<textarea name="texto" id="texto" cols="30" rows="10"></textarea>
-<hr>
-<input type="submit" value="guardar">
-
-</form>
-<h2>Imagen</h2>
-<img src="OIP.jpg" alt="imagen de bart" width="200">
-
-</body>
+    <hr />
+    <!-- CAMBIO DE TEMA ENTRE PARRAFOS, DE FORMA VISUAL ´PUEDE SER REPRESENTADO  COMO UNA LINEA HORIZONTAL SIN EMBARGO NO SE DEBERIA USAR PARA ESTO -->
+    <h2>otro parrafo</h2>
+    <h3>parrafos</h3>
+    <p>
+      <span style="color: blue">Lorem, ipsum dolor sit amet </span>consectetur
+      adipisicing elit. Illo facere itaque libero inventore repudiandae, quis
+      eaque quibusdam, asperiores est, veniam eum. Ut, accusantium dignissimos
+      non nesciunt illo repellendus. Odit, tempora?
+    </p>
+    <hr />
+    <h2>link</h2>
+    <h3>ancla</h3>
+    <a href="https://www.google.com" target="_blank">Google</a><br />
+    <a target="_blank" href="https://www.google.com"
+      >Google en ventana aparte</a
+    >
+    <hr />
+    <!-- ancla crea enlaces  -->
+    <h2>Formulario</h2>
+    <form action="Cyberform" method="get">
+      <label for="nombre">nombre</label><br />
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="indica tu nombre"
+      />
+      <br />
+      <label for="edad">edad</label><br />
+      <input type="number" id="edad" name="edad" placeholder="indica tu edad" />
+      <br />
+      <label for="email">email</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="indica tu email"
+      />
+      <br /><br />
+      <label for="password">password</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="indica tu password"
+      />
+      <br /><br />
+      <label for="texto">Texto</label>
+      <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+      <hr />
+      <input type="submit" value="guardar" />
+    </form>
+    <h2>Imagen</h2>
+    <img src="OIP.jpg" alt="imagen de bart" width="200" />
+    <hr />
+    <h2>Listados</h2>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+    </ul>
+    <ol>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>
+        <ul>
+          <li style="list-style: lower-roman">SUB ITEM1</li>
+          <li style="list-style: lower-roman">sub item2</li>
+          <li style="list-style: lower-roman">sub item3</li>
+        </ul>
+      </li>
+    </ol>
+    <hr />
+    <h2>TABLA</h2>
+    <table style="border: solid 1px black">
+      <thead>
+        <tr>
+          <th style="border: solid 1px black">Implate</th>
+          <th style="border: solid 1px black">PRECIO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: solid 1px black">ojo laser xd</td>
+          <td style="border: solid 1px black">10000</td>
+        </tr>
+        <tr>
+          <td style="border: solid 1px black">Audifono implantado</td>
+          <td style="border: solid 1px black">5000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td style="border: solid 1px black">TOTAL</td>
+          <td style="border: solid 1px black">15000</td>
+        </tr>
+      </tfoot>
+    </table>
+    <br /><br /><br /><br /><br />
+  </body>
 </html>
