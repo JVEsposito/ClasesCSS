@@ -2,7 +2,11 @@
 * {
   box-sizing: content-box;
 }
-
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
 body {
   background-color: rgb(204, 204, 230);
   color: rgb(0, 0, 0);
@@ -85,7 +89,7 @@ h1 + p {
 /* estilos mas usados*/
 /* declara el tipo de letra que se usa para mostrar en un texto. se pueden declarar multiples valores separados por coma para ofrecer al navegador alternativas en caso de que alguna no se encuentre disponible*/
 .container {
-  border-top: 10px solid black;
+  border-top: 1px solid black;
   padding: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -124,6 +128,9 @@ h1 + p {
   border: 1px solid black;
   background-color: #007fff; /* 0 - 9 y A - F*/
 }
+.content {
+  font-size: 30px;
+}
 /* tamaños*/
 .div-in-mydiv-3 {
   height: 50px;
@@ -145,6 +152,190 @@ h1 + p {
 }
 .div-vh-vw {
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 40px);
   background-color: blue;
+}
+.punto {
+  height: 100pt;
+  width: 100pt;
+  background-color: red;
+}
+.div-rem {
+  /* en relacion al tamaño base de la pagina */
+  height: 20rem;
+  width: 20rem;
+  background-color: red;
+}
+.div-em {
+  height: 20em;
+  width: 20em;
+  background-color: green;
+}
+._contenedor {
+  background-color: rgb(128, 0, 85);
+  width: 500px;
+  height: 500px;
+}
+._contenido {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  max-height: 200px; /*maximo de alto*/
+  max-width: 200px; /*maximo de ancho*/
+  overflow-y: auto; /* scroll, hidden, auto*/
+  overflow-y: hidden;
+}
+._otrocontenido {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+.contenido-grande {
+  background-color: yellow;
+  width: 1000px;
+  height: 1000px;
+}
+.contenedor-de-bordes > div {
+  height: 100px;
+  width: 100px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: green;
+  border-color: teal;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.borde-1 {
+  border-style: dashed !important;
+}
+.borde-2 {
+  border-style: double !important;
+}
+.borde-3 {
+  border-style: outset !important;
+}
+.borde-4 {
+  border-style: solid !important;
+}
+.borde-en-una-linea {
+  border: 1px solid red;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+}
+/* flex container
+afectara no solo a si mismo, tambien afectara lo que contenga
+es un sistema de elementos flexibles donde los elementos HTML se adaptan y colocan automaticamente siendo mas facil personalizarlos
+1 flex-direction: row | row-reverse | column | column-reverse DEFINE LA DIRECCION DE LOS ELEMENTOS DEL CONTENEDOR
+2 flex-wrap: nowrap | wrap | wrap-reverse
+DEFINE QUE LOS ELEMENTOS SE AJUSTAN A LA PANTALLA(PUEDAN SALTAR A LA SIGUIENTE COLUMNA, ETC)
+3 FLEX-FLOW: COMBINACION DE LAS PROPIEDADES DE FLEX-WRAP Y FLEX-DIRECTION.
+4 justify-content: start | end | flex-start | flex-end | center | space-between | space-around
+5 align-items: flex-start | flex-end | center | baseline | stretch
+5 align-content: flex-start | flex-end | center | space-between | space-around | stretch (PARA ALINEAR LAS FILAS )
+*/
+.flex-container {
+  display: flex; /* Afecta lo que contiene el elemento */
+  /* flex-wrap: wrap-reverse;  nowrap, wrap... flex- direction : column, row, row-reverse, column-reverse (wrap se ajusta a la pantalla) */
+  /*flex-flow: row wrap;  es una combinacion de las propiedades flex-wrap y flex-direction*/
+  /*justify-content: end;
+  align-items: baseline;*/
+  flex-wrap: wrap;
+  align-content: space-around;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+
+  height: 300px;
+}
+.flex-container > div {
+  background-color: rgb(160, 66, 66);
+  /*margin: 10px;*/
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  width: 100px;
+  line-height: 70px;
+  height: 70px;
+}
+.contenedor-perfecto {
+  display: flex;
+  background-color: rgb(105, 102, 102);
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.contenido-perfecto {
+  display: flex;
+  background-color: rgb(65, 230, 0);
+  margin: 50px 50px;
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+/* SELECTOR HIJO
+COMPORTAMIENTO DE ELEMENTOS HIJOS DENTRO DE CONTENEDORES FLEX
+ORDER: ESPECIFICA EL ORDEN DE LOS ELEMENTOS
+FLEX-GROW: DETERMINA CUANTO CRECE EL ELEMENTO RELATIVO AL RESTO DE LOS ELEMENTOS EN EL CONTENEDOR FLEX */
+.flex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px;
+
+  height: 300px;
+}
+.flex-container2 > div {
+  /* margin: 10px; */
+  background-color: #007fff;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+}
+.flex-container2 > div:nth-child(1) {
+  order: 3; /*le cambio el orden*/
+  flex-grow: 1;
+  background-color: #00ff00;
+}
+.flex-container2 > div:nth-child(2) {
+  order: 1;
+  flex-grow: 5;
+  background-color: rgb(32, 30, 30);
+}
+.flex-container2 > div:nth-child(3) {
+  order: 2;
+  flex-grow: 5;
+  background-color: #752c6f;
+}
+/* FLEX-SHRINK: DETERMINA CUANTO REDUCIRA EL ELEMENTO RELATIVO AL RESTO DE LOS ELEMENTOS EN EL CONTENEDOR FLEX */
+.flex-container-3 {
+  display: flex;
+  background-color: beige;
+  align-items: center;
+  justify-content: center;
+}
+.flex-container-3 > div {
+  background-color: #007fff;
+  color: white;
+  margin: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+  font-size: 30px;
+}
+.flex-container-3 > div:nth-child(2) {
+  flex-shrink: 0.9;
+}
+/* flex-basic: 
+determina una longitud especifica*/
+.flex-container-3 > div:nth-child(3) {
+  flex-basis: 200px;
 }
